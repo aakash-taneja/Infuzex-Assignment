@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Box, Stack, Typography } from "@mui/material";
 import FooterLinks from "./FooterLinks";
 import map from "../Images/map.png";
@@ -7,6 +7,17 @@ import win from "../Images/win.svg"
 import wln from "../Images/wln.svg"
 
 export default function Footer() {
+  const [imgHeight, setImgHeight] = useState(null);
+  const setImageSize = () => {
+    if (window.innerWidth < 900) {
+      setImgHeight(150);
+    } else {
+      setImgHeight(200);
+    }
+  };
+  useEffect(() => {
+    setImageSize();
+  });
   return (
     <Stack      
       sx={{ bgcolor: "#333" , pb:"100px", pt:"50px", display:"flex", justifyContent:"space-around", alignItems:{xs:"center"},flexDirection:{xs:"column",md:"row"}}}
@@ -30,7 +41,7 @@ export default function Footer() {
         </Box>
       </Stack>
       <Stack sx={{ display:"flex", alignItems:"center", width:{xs:"100%",md:"30%"}}} >
-        <img src={map} alt="map image" style={{ height: "200px" , width:"400px" , borderRadius:"8px"}} />
+        <img src={map} alt="map image" height={imgHeight} width = {imgHeight*2} style={{ borderRadius:"8px"}} />
       </Stack>
     </Stack>
   );

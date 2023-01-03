@@ -23,7 +23,7 @@ export default function Hero() {
   const setImageSize = () => {
     if (window.innerWidth < 900) {
       setImgHeight(100);
-      setIconHeight(25);
+      setIconHeight(30);
     } else {
       setImgHeight(300);
       setIconHeight(50);
@@ -151,7 +151,7 @@ export default function Hero() {
               <Stack
                 direction="row"                
                 spacing={3}
-                sx={{ color: "" , mt:"20px", justifyContent:{xs:"center",md:"start"}}}
+                sx={{ color: "" , mt:{xs:"5px",md:"20px"}, justifyContent:{xs:"center",md:"start"}}}
               >
                 <img src={fb} height={iconHeight}/>
                 <img src={tw} height={iconHeight}/>
