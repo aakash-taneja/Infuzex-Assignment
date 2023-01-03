@@ -12,21 +12,28 @@ import Language from "./Language";
 
 export default function Body() {
   return (
-    <Stack direction="row" sx ={{bgcolor:'#f3f3f3'}} justifyContent="space-evenly">
-      <Stack direction="column " sx={{width:"60%"}}>
-        <Hero/>
+    <Stack
+      direction="row"
+      sx={{ bgcolor: "#f3f3f3" }}
+      justifyContent="space-evenly"
+    >
+      <Stack
+        direction="column "
+        sx={{ width: { xl: "60%", lg: "60%", xs:"90%" } }}
+      >
+        <Hero />
         <SummaryCard />
         <AboutCard />
         <AboutCard />
         <AboutCard />
         <Skills />
-        <Resume/>
-        <Language/>
+        <Resume />
+        <Language />
       </Stack>
-      <Stack direction="column" sx={{width:"20%"}}> 
-        <Applications/>
-        <WorkingStatus/>
-        <Form/>
+      <Stack direction="column" sx={{ width: { xl: "20%", lg:"25%"}, display:{xs:"none", lg:"flex"}}}>
+        <Applications />
+        <WorkingStatus />
+        <Form />
       </Stack>
     </Stack>
 

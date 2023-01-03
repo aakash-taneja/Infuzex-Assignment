@@ -33,9 +33,10 @@ export default function Skills() {
           py: "5px",
           bgcolor:"rgba(0, 69, 199, 1)",
           px: "15px",
-          borderRadius: "20px",
-          mx: "20px",
-          my: "5px",          
+          borderRadius: "10px",
+          // mx: "20px",
+          my: "5px", 
+          width:"100%"         
         }}
       >
         See All

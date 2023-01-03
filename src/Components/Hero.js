@@ -1,6 +1,6 @@
 import { Button, Typography } from "@mui/material";
 import { Stack } from "@mui/system";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import person from "../Images/person.webp";
 import paint from "../Images/paint.jpg";
 import EditIcon from "./EditIcon";
@@ -11,6 +11,17 @@ import GitIcon from "./GitIcon";
 import LnIcon from "./LnIcon";
 
 export default function Hero() {
+  const [imgHeight,setImgHeight]=useState(null);
+  const setImageSize = () => {
+    if(window.innerWidth < 900) {
+        setImgHeight(100)
+      } else {
+        setImgHeight(300)
+      }  
+    }
+  useEffect(()=>{
+    setImageSize()
+  })
   return (
     <Stack
       direction="column"
@@ -27,24 +38,24 @@ export default function Hero() {
         <img
           src={paint}
           alt="painting images"
+          height={imgHeight}
           style={{
             borderRadius: "15px 15px 0px 0px",
-            height: "300px",
             objectFit: "cover",
           }}
         />
       </Stack>
-      <Stack direction="row" justifyContent="space-between" alignItems="center">
+      <Stack sx={{display:"flex", flexDirection:{xs:"column",md:"row"}}} justifyContent="space-between" alignItems="center">
         <Stack sx={{ mt: "-15%", ml: "5%" }}>
           <img
             src={person}
             alt="personimage"
+            height={imgHeight}
+              width= {imgHeight}
             style={{
               borderRadius: "50%",
               overflow: "hidden",
-              objectFit: "cover",
-              height: " 300px",
-              width: "300px",
+              objectFit: "cover",              
               border: "10px solid #fff",
             }}
           />
@@ -74,7 +85,7 @@ export default function Hero() {
             Jaipur, Rajasthan
           </Button>
         </Stack>
-        <Stack>
+        <Stack sx={{display:"flex", flexDirection:{xs:"row",md:"column"}, my:{xs:"10px",md:"0px"}}}>
           <Button
             variant="outline"
             sx={{

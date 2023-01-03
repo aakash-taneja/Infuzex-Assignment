@@ -23,12 +23,12 @@ export default function Resume() {
           Resume
         </Typography>
       </Stack>
-      <Stack direction="row" justifyContent="space-between">
+      <Stack sx={{display:"flex", flexDirection:{xs:"column", md:"row"}}}>
         <Stack direction="row">
           <ResIcon />
           <span style={{ marginLeft: "10px" }}><Typography variant="h6">portfolio.resume.pdf</Typography></span>
         </Stack>
-        <Stack direction="row">
+        <Stack direction="row" justifyContent="start">
           <Button
             variant="contained"
             sx={{
@@ -38,7 +38,8 @@ export default function Resume() {
               py: "5px",
               px: "15px",
               borderRadius: "20px",
-              mx: "20px",
+              mx: {xs:"0px",md:"20px"},
+              mt: {xs:"20px",md:"0px"}
             }}
           >
             <UploadIcon /> <span style={{ marginLeft: "10px" }}>Upload</span>
@@ -52,6 +53,7 @@ export default function Resume() {
               py: "5px",
               px: "15px",
               borderRadius: "20px",
+              mt: {xs:"20px",md:"0px"}
             }}
           >
             <DownloadIcon /> <span style={{ marginLeft: "10px" }}>Download</span>

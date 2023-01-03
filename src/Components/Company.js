@@ -28,7 +28,7 @@ export default function Company() {
 					my:"5px",
 					borderRadius:"10px",
 					fontSize:"10px",
-					lineHeight:"10px"
+					lineHeight:"10px"          
         }}
       >
         shortlisted
