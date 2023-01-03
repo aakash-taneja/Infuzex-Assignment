@@ -27,12 +27,13 @@ export default function SummaryCard() {
             borderRadius: "10px",
             py: "5px",
             px: "8px",
+            color:"rgba(0, 69, 199, 1)"
           }}
         >
           <EditIcon />
         </Box>
       </Stack>
-      <Typography variant="h6" mt={2}>
+      <Typography variant="h6" mt={2} sx={{fontSize:{xs:"16px"}}}>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam magni sit
         quos odio molestiae. Vitae hic, doloribus enim aspernatur tempora alias
         aliquid est incidunt cumque temporibus tempore iusto saepe veritatis

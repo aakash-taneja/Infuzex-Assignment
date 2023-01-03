@@ -20,9 +20,9 @@ export default function AboutCard() {
     >
       <Stack direction="row" justifyContent="space-between">
         <Typography variant="h6" sx={{ fontWeight: 600 }}>
-          Experiance
+          Experience
         </Typography>
-        <Box sx={{border:"1px solid", borderRadius:"10px", py: '5px', px:'8px'}}><EditIcon/></Box>
+        <Box sx={{border:"1px solid", borderRadius:"10px", py: '5px', px:'8px',color:"rgba(0, 69, 199, 1)"}}><EditIcon/></Box>
       </Stack>
       <ImageCard />
       <ImageCard />

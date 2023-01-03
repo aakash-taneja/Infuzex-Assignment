@@ -2,9 +2,9 @@ import React from "react";
 import { Box, Stack, Typography } from "@mui/material";
 import FooterLinks from "./FooterLinks";
 import map from "../Images/map.png";
-import FbIcon from "./FbIcon";
-import GitIcon from "./GitIcon";
-import LnIcon from "./LnIcon";
+import wfb from "../Images/wfb.svg"
+import win from "../Images/win.svg"
+import wln from "../Images/wln.svg"
 
 export default function Footer() {
   return (
@@ -17,9 +17,9 @@ export default function Footer() {
         spacing={5}        
         sx={{ color: "",width:{xs:"100%",md:"30%"} }}
       >
-        <FbIcon />
-        <LnIcon />
-        <GitIcon />
+        <img src={wfb} height="50px"/>
+        <img src={wln} height="50px"/>
+        <img src={win} height="50px"/>
       </Stack>
       <Stack sx={{display:"flex", flexDirection:"row", justifyContent:{xs:"space-around",md:"space-between"},width:{xs:"100%",md:"30%"}, my:{xs:"20px",md:"0px"}}}>
         <Box>

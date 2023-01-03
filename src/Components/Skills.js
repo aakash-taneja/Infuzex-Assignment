@@ -22,8 +22,8 @@ export default function Skills() {
           Skills
         </Typography>
       </Stack>
-      <Stack direction="row" justifyContent="space-between" sx={{width:"80%"}}>
-        <Stack direction="column" spacing={2}>
+      <Stack  justifyContent="space-between" sx={{width:"80%" ,display:"flex", flexDirection:{xs:"col",md:"row"}}}>
+        <Stack direction="column" spacing={1}>
           <Stack direction="row" alignItems="center" spacing={1}>
             <Check />
             <Typography
@@ -53,7 +53,7 @@ export default function Skills() {
             </Typography>
           </Stack>
         </Stack>
-        <Stack direction="column" spacing={2}>
+        <Stack direction="column" sx={{mt:{xs:"16px", md: "0px"}}} spacing={1}>
           <Stack direction="row" alignItems="center" spacing={1}>
             <Check />
             <Typography
@@ -79,7 +79,7 @@ export default function Skills() {
                 borderRadius: "20px",
               }}
             >
-              Competitive programing
+              Competitive
             </Typography>
           </Stack>
         </Stack>

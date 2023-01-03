@@ -18,7 +18,7 @@ export default function Skills() {
     >
       <Stack direction="row">
         <Typography variant="h6" sx={{ fontWeight: 600 }}>
-          Skills
+          Active Applications
         </Typography>
       </Stack>
       <Company />

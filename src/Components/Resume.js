@@ -23,15 +23,16 @@ export default function Resume() {
           Resume
         </Typography>
       </Stack>
-      <Stack sx={{display:"flex", flexDirection:{xs:"column", md:"row"}}}>
+      <Stack sx={{display:"flex", flexDirection:{xs:"column", md:"row"}, justifyContent:"space-between"}}>
         <Stack direction="row">
           <ResIcon />
           <span style={{ marginLeft: "10px" }}><Typography variant="h6">portfolio.resume.pdf</Typography></span>
         </Stack>
-        <Stack direction="row" justifyContent="start">
+        <Stack direction="row" justifyContent="start" >
           <Button
             variant="contained"
-            sx={{
+            disableRipple
+            sx={{              
               boxShadow: 0,
               bgcolor: "#d3d3d3",
               color: "rgba(0, 69, 199, 1)",
@@ -40,13 +41,15 @@ export default function Resume() {
               borderRadius: "20px",
               mx: {xs:"0px",md:"20px"},
               mt: {xs:"20px",md:"0px"}
+              ,"&:hover": { backgroundColor: "#d3d3d3" },
             }}
           >
             <UploadIcon /> <span style={{ marginLeft: "10px" }}>Upload</span>
           </Button>
           <Button
             variant="contained"
-            sx={{
+            disableRipple
+            sx={{              
               boxShadow: 0,
               bgcolor: "rgba(0, 69, 199, 1)",
               color: "#d3d3d3",
@@ -54,6 +57,8 @@ export default function Resume() {
               px: "15px",
               borderRadius: "20px",
               mt: {xs:"20px",md:"0px"}
+              ,"&:hover": { backgroundColor: "rgba(0, 69, 199, 1)" },
+              ml:{xs:"10px",md:"0px"}
             }}
           >
             <DownloadIcon /> <span style={{ marginLeft: "10px" }}>Download</span>
